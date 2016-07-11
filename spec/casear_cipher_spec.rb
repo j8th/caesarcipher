@@ -2,8 +2,8 @@ require "caesar_cipher"
 
 describe CaesarCipher do
 
-  let(:caesar_cipher){ CaesarCipher.new }
-
+  # include Alpha
+  
   describe ".encrypt" do 
 
     it "returns the same character if the shift value is 0" do 
@@ -12,7 +12,7 @@ describe CaesarCipher do
 
       inputs_and_outputs.each do |input, output|
         expected = output
-        actual = caesar_cipher.encrypt(input[0], input[1])
+        actual = CaesarCipher.encrypt(input[0], input[1])
         expect(actual).to eq(expected)
       end
     end
@@ -24,7 +24,7 @@ describe CaesarCipher do
 
       inputs_and_outputs.each do |input, output|
         expected = output
-        actual = caesar_cipher.encrypt(input[0], input[1])
+        actual = CaesarCipher.encrypt(input[0], input[1])
         expect(actual).to eq(expected)
       end
     end
@@ -32,9 +32,12 @@ describe CaesarCipher do
     it "returns the correct encrypted letter when the shift value is greater than 26" do 
 
       inputs_and_outputs = { ["A", 27] => "B", ["B", 80] => "D"}
-      expected = "B"
-      actual = caesar_cipher.encrypt("A", 27)
-      expect(actual).to eq(expected)
+
+      inputs_and_outputs.each do |input, output|
+        expected = output
+        actual = CaesarCipher.encrypt(input[0], input[1])
+        expect(actual).to eq(expected)
+      end
     end
 
     it "returns an encrypted letter that wraps around the alphabet" do 
@@ -43,7 +46,7 @@ describe CaesarCipher do
 
       inputs_and_outputs.each do |input, output|
         expected = output
-        actual = caesar_cipher.encrypt(input[0], input[1])
+        actual = CaesarCipher.encrypt(input[0], input[1])
         expect(actual).to eq(expected)
       end
     end
@@ -55,7 +58,7 @@ describe CaesarCipher do
 
       inputs_and_outputs.each do |input, output|
         expected = output
-        actual = caesar_cipher.encrypt(input[0], input[1])
+        actual = CaesarCipher.encrypt(input[0], input[1])
         expect(actual).to eq(expected)
       end
     end
@@ -67,7 +70,7 @@ describe CaesarCipher do
 
       inputs_and_outputs.each do |input, output|
         expected = output
-        actual = caesar_cipher.encrypt(input[0], input[1])
+        actual = CaesarCipher.encrypt(input[0], input[1])
         expect(actual).to eq(expected)
       end
     end
