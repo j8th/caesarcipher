@@ -1,21 +1,24 @@
-module Alpha 
+module CaesarCipher
 
-  UPPERCASE_RANGE = ("A".."Z")
-  LOWERCASE_RANGE = ("a".."z")
+  module Alpha 
 
-  def reindex(value)
-    value % 26
-  end
+    UPPERCASE_RANGE = ("A".."Z")
+    LOWERCASE_RANGE = ("a".."z")
 
-  def upcase?(char)
-    UPPERCASE_RANGE.include?(char)
-  end
+    def reindex(value)
+      value % 26
+    end
 
-  def letter?(char)
-    UPPERCASE_RANGE.include?(char) || LOWERCASE_RANGE.include?(char)
-  end
+    def upcase?(char)
+      UPPERCASE_RANGE.include?(char)
+    end
 
-  def start_ascii(char)
-    upcase?(char) ? UPPERCASE_RANGE.first : LOWERCASE_RANGE.first
+    def letter?(char)
+      UPPERCASE_RANGE.include?(char) || LOWERCASE_RANGE.include?(char)
+    end
+
+    def start_ascii(char)
+      upcase?(char) ? UPPERCASE_RANGE.first : LOWERCASE_RANGE.first
+    end
   end
 end

@@ -24,7 +24,7 @@ $ bundle install
 
 Run cipher
 ```
-$ 
+$ ./bin/execute_cipher.rb
 ```
 
 Usage

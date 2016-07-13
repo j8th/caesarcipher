@@ -2,7 +2,7 @@ require "caesar_cipher"
 
 describe CaesarCipher do
 
-  # include Alpha
+  let(:caesar_cipher) { Class.new { extend CaesarCipher}}
   
   describe ".encrypt" do 
 
@@ -12,7 +12,7 @@ describe CaesarCipher do
 
       inputs_and_outputs.each do |input, output|
         expected = output
-        actual = CaesarCipher.encrypt(input[0], input[1])
+        actual = caesar_cipher.encrypt(input[0], input[1])
         expect(actual).to eq(expected)
       end
     end
@@ -24,7 +24,7 @@ describe CaesarCipher do
 
       inputs_and_outputs.each do |input, output|
         expected = output
-        actual = CaesarCipher.encrypt(input[0], input[1])
+        actual = caesar_cipher.encrypt(input[0], input[1])
         expect(actual).to eq(expected)
       end
     end
@@ -35,7 +35,7 @@ describe CaesarCipher do
 
       inputs_and_outputs.each do |input, output|
         expected = output
-        actual = CaesarCipher.encrypt(input[0], input[1])
+        actual = caesar_cipher.encrypt(input[0], input[1])
         expect(actual).to eq(expected)
       end
     end
@@ -46,7 +46,7 @@ describe CaesarCipher do
 
       inputs_and_outputs.each do |input, output|
         expected = output
-        actual = CaesarCipher.encrypt(input[0], input[1])
+        actual = caesar_cipher.encrypt(input[0], input[1])
         expect(actual).to eq(expected)
       end
     end
@@ -58,7 +58,7 @@ describe CaesarCipher do
 
       inputs_and_outputs.each do |input, output|
         expected = output
-        actual = CaesarCipher.encrypt(input[0], input[1])
+        actual = caesar_cipher.encrypt(input[0], input[1])
         expect(actual).to eq(expected)
       end
     end
@@ -70,7 +70,7 @@ describe CaesarCipher do
 
       inputs_and_outputs.each do |input, output|
         expected = output
-        actual = CaesarCipher.encrypt(input[0], input[1])
+        actual = caesar_cipher.encrypt(input[0], input[1])
         expect(actual).to eq(expected)
       end
     end

@@ -1,11 +1,14 @@
-class WrapperIO
+module CaesarCipher
 
-  def get_action
-    gets.chomp
+  class WrapperIO
+
+    def get_action
+      gets.chomp
+    end
+
+    def puts_string(string)
+      puts string
+    end
+
   end
-
-  def puts_string(string)
-    puts string
-  end
-
 end
