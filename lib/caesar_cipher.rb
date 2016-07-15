@@ -1,11 +1,8 @@
 require_relative "alpha"
 
-
 module CaesarCipher 
 
   include Alpha
-
-
 
   def encrypt(user_input, shift_value)
     @user_input = user_input
